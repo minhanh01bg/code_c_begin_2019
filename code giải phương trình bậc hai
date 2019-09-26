@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+float a, b, c, d, x, y;
+int main()
+{
+	cout<<"nhap vao ba he so a, b, c :";
+	cin >>a>>b>>c;
+	float d = b*b - 4*a*c;
+	cout <<d<<" = dental"<<endl;
+	if(d>0)
+	{
+		cout<<"phuong trinh co hai nghiem phan biet nhu sau"<<endl;
+		float x = ((-b+sqrt(d))/(2*a)), y = ((-b-sqrt(d))/(2*a));
+		cout<<"x = "<<x<<endl;
+		cout<<"y = "<<y<<endl;
+		return 0; 
+	}
+	if(d<0)
+	{
+		cout<<"phuong trinh vo nghiem";
+		return 0;
+	}
+	if(d==0)
+	{
+		cout<<"phuong trinh co nghiem kep:"<<endl;
+		float x = y = -b/(2*a);
+		cout<<y<<" = x = y = "<<x; 
+		return 0;
+	}
+}
