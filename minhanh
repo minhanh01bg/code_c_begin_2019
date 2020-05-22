@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;  // đếm số nguyên tố theo thứ tự từ nhỏ đến lớn trong mảng một chiều
+const int MAX=1e6;
+int n,d=0,a[MAX],snt[MAX];
+int main(){
+   cin>>n;
+   for(int i=0;i<n;i++){
+      cin>>a[i];
+   }
+   for(int i=0;i<MAX;i++){
+      snt[i]=0;
+   }
+   for(int i=0;i<n;i++){
+      d=0;
+      for(int j=2;j<=sqrt(a[i]);j++){
+         if(a[i]%j==0){
+            d=1;
+            continue;
+         }
+      }
+      if(d==0&&a[i]>1){
+         snt[a[i]]++;
+      }
+   }
+   for(int i=0;i<MAX;i++){
+      if(snt[i]>0){
+         cout<<i<<" "<<snt[i]<<endl;
+      }
+   }
+}
