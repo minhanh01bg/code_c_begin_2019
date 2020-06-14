@@ -1,0 +1,24 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+bool im(int n){
+	int d=0;
+	for(int i=2;i<=sqrt(n);i++){
+		if(n%i==0){
+			d=1;
+			break;
+		}
+	}
+	if(d==0&&n>1)
+	return true;
+	else return false;
+}
+int main(){
+	int a,b;
+	cin>>a>>b;
+	for(int i= a;i<=b;i++){
+		if(im(i)){
+			cout<<i<<" ";
+		}
+	}
+}
